@@ -7,33 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponentComponent implements OnInit {
 
-  constructor() { }
-
-  private sideBarElement = document.querySelector('.toggle-sidebar-btn');
-
-  ngOnInit(): void {
-    this.sideBarElement!.addEventListener('click', this.toggleSideBar)
-    console.log(this.sideBarElement);
+  public profile = {
+    shortName: "B. Grabski",
+    longName: "Bartosz Grabski",
+    jobTitle: "administrator systemu",
+    userIcon: "assets/img/profile-img.jpg"
   }
 
-  // select(el) {
-  //   el = el.trim()
-  //     return document.querySelector(el)
-  // }
+  constructor() { }
 
-  // on(type, el, listener, all = false) {
-  //     select(el, all).addEventListener(type, listener)
-  // }
-
-  // onScroll(el, listener) {
-  //   el.addEventListener('scroll', listener)
-  // }
+  ngOnInit(): void {
+  }
 
   toggleSideBar() {
-    console.log("klik");
-    // this.on('click', '.toggle-sidebar-btn', function(e) {
-    //   this.select('body').classList.toggle('toggle-sidebar')
-    // })
+    document.querySelector('body')?.classList.toggle('toggle-sidebar')
+  }
+
+  toggleSearch() {
+    document.querySelector('.search-bar')?.classList.toggle('search-bar-show')
   }
 
 }
