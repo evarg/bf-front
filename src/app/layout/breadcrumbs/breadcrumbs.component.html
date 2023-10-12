@@ -1,9 +1,6 @@
-<h1>breadcrumbs works!</h1>
-
-
 <nav>
   <ol class="breadcrumb">
-  <li class="breadcrumb-item"><a href="index.html">Pulpit</a></li>
+  <li class="breadcrumb-item"><a  [routerLink]="['/']">Pulpit</a></li>
 
   <li *ngFor="let breadcrumb of (breadcrumbs$ | async)" class="breadcrumb-item">
     <a [href]="breadcrumb.url">{{ breadcrumb.label }}</a>

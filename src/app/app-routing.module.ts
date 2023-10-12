@@ -42,16 +42,17 @@ const routes: Routes = [
   {
     path: 'clients',
     component: LayoutComponent,
+    data: { breadcrumb: 'Klienci' },
     children: [
       {
         path: '',
         component: ClientsComponent,
-        data: { breadcrumb: [{'label': "HW", 'link': "w pizdu"}]},
+        data: { breadcrumb: 'Lista' },
       },
       {
         path: 'add',
         component: ClientsNewComponent,
-        data: { breadcrumb: (data: any) => { console.log (data)} },
+        data: { breadcrumb: 'Nowy' },
       },
       { path: 'edit/:id', component: ClientsEditComponent },
       { path: 'view/:id', component: ClientsViewComponent },
@@ -62,6 +63,7 @@ const routes: Routes = [
   {
     path: 'buildings',
     component: LayoutComponent,
+    data: { breadcrumb: 'Budynki' },
     children: [
       { path: '', component: BuildingsComponent },
       { path: 'add', component: BuildingsNewComponent },
@@ -74,6 +76,7 @@ const routes: Routes = [
   {
     path: 'items',
     component: LayoutComponent,
+    data: { breadcrumb: 'Asortyment' },
     children: [
       { path: '', component: ItemsComponent },
       { path: 'add', component: ItemsNewComponent },
@@ -86,6 +89,7 @@ const routes: Routes = [
   {
     path: 'itemsgroups',
     component: LayoutComponent,
+    data: { breadcrumb: 'Grupy asortymenowe' },
     children: [
       { path: '', component: ItemsGroupsComponent },
       { path: 'add', component: ItemsGroupsNewComponent },
