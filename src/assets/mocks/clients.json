@@ -1,0 +1,18 @@
+  [
+    {
+      "id": 1,
+      "name": "grave",
+      "desc": "debil",
+      "contact_person": "Biduś baduś",
+      "buildings_count": "23",
+      "status": "Aktywny"
+    },
+    {
+      "id": 2,
+      "name": "evarg",
+      "desc": "jeszcze większy debil",
+      "contact_person": "Reksio",
+      "buildings_count": "17",
+      "status": "Zablokowany"
+    }
+  ]

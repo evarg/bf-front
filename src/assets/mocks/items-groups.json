@@ -1,0 +1,14 @@
+  [
+    {
+      "id": 1,
+      "name": "centrale pożarowe",
+      "desc": "debil",
+      "status": "Aktywny"
+    },
+    {
+      "id": 2,
+      "name": "czujki ruchu",
+      "desc": "jeszcze większy debil",
+      "status": "Zablokowany"
+    }
+  ]

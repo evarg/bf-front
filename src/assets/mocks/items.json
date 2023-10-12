@@ -1,0 +1,14 @@
+  [
+    {
+      "id": 1,
+      "name": "czujka 1",
+      "desc": "debil",
+      "status": "Aktywny"
+    },
+    {
+      "id": 2,
+      "name": "centrala 1",
+      "desc": "jeszcze większy debil",
+      "status": "Zablokowany"
+    }
+  ]

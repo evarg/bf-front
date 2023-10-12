@@ -27,9 +27,6 @@ import { ItemsGroupsEditComponent } from './sites/items-groups-edit/items-groups
 import { ItemsGroupsViewComponent } from './sites/items-groups-view/items-groups-view.component';
 import { ItemsGroupsDeleteComponent } from './sites/items-groups-delete/items-groups-delete.component';
 
-import { UserResolverService } from './services/user-resolver.service';
-import { Breadcrumb } from './models/breadcrumb.model';
-
 const routes: Routes = [
   {
     path: '',
@@ -47,7 +44,7 @@ const routes: Routes = [
       {
         path: '',
         component: ClientsComponent,
-        data: { breadcrumb: 'Lista' },
+        data: { breadcrumb: '' },
       },
       {
         path: 'add',
@@ -63,7 +60,7 @@ const routes: Routes = [
   {
     path: 'buildings',
     component: LayoutComponent,
-    data: { breadcrumb: 'Budynki' },
+    data: { breadcrumb: '' },
     children: [
       { path: '', component: BuildingsComponent },
       { path: 'add', component: BuildingsNewComponent },
@@ -76,7 +73,7 @@ const routes: Routes = [
   {
     path: 'items',
     component: LayoutComponent,
-    data: { breadcrumb: 'Asortyment' },
+    data: { breadcrumb: '' },
     children: [
       { path: '', component: ItemsComponent },
       { path: 'add', component: ItemsNewComponent },
@@ -89,7 +86,7 @@ const routes: Routes = [
   {
     path: 'itemsgroups',
     component: LayoutComponent,
-    data: { breadcrumb: 'Grupy asortymenowe' },
+    data: { breadcrumb: '' },
     children: [
       { path: '', component: ItemsGroupsComponent },
       { path: 'add', component: ItemsGroupsNewComponent },

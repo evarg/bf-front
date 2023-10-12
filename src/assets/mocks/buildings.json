@@ -1,0 +1,16 @@
+  [
+    {
+      "id": 1,
+      "name": "Libelta 23",
+      "desc": "jakiś tam opiś libelta",
+      "contact_person": "Biduś baduś",
+      "systems_count": "23"
+    },
+    {
+      "id": 2,
+      "name": "evarg",
+      "desc": "jeszcze większy debil",
+      "contact_person": "Reksio",
+      "systems_count": "17"
+    }
+  ]

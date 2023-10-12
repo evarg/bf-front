@@ -36,6 +36,7 @@ import { ItemsGroupsEditComponent } from './sites/items-groups-edit/items-groups
 import { ItemsGroupsViewComponent } from './sites/items-groups-view/items-groups-view.component';
 import { ItemsGroupsDeleteComponent } from './sites/items-groups-delete/items-groups-delete.component';
 import { BreadcrumbsComponent } from './layout/breadcrumbs/breadcrumbs.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -76,7 +77,8 @@ import { BreadcrumbsComponent } from './layout/breadcrumbs/breadcrumbs.component
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
