@@ -1,17 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { ClientsService } from 'src/app/services/clients.service';
-import { Client } from 'src/app/models/client';
+import { BuildingsService } from 'src/app/services/buildings.service';
+import { Building } from 'src/app/models/building';
 
 @Component({
-  selector: 'app-clients',
-  templateUrl: './clients.component.html',
-  styleUrls: ['./clients.component.scss']
+  selector: 'app-buildings',
+  templateUrl: './buildings.component.html',
+  styleUrls: ['./buildings.component.scss']
 })
-export class ClientsComponent implements OnInit {
+export class BuildingsComponent implements OnInit {
 
-  public dataSource: Client[] = [];
+  public dataSource: Building[] = [];
 
-  constructor(private service: ClientsService) { }
+  constructor(private service: BuildingsService) { }
 
   ngOnInit(): void {
     this.handleData();

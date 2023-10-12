@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { BreadcrumbsService } from 'src/app/breadcrumbs.service';
+import { BreadcrumbsService } from 'src/app/services/breadcrumbs.service';
 import { Breadcrumb } from 'src/app/models/breadcrumb.model';
 import { Observable } from 'rxjs';
 

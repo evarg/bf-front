@@ -1,17 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { ClientsService } from 'src/app/services/clients.service';
-import { Client } from 'src/app/models/client';
+import { ItemsGroupsService } from 'src/app/services/items-groups.service';
+import { ItemGroup } from 'src/app/models/item-group';
 
 @Component({
-  selector: 'app-clients',
-  templateUrl: './clients.component.html',
-  styleUrls: ['./clients.component.scss']
+  selector: 'app-items-groups',
+  templateUrl: './items-groups.component.html',
+  styleUrls: ['./items-groups.component.scss']
 })
-export class ClientsComponent implements OnInit {
+export class ItemsGroupsComponent implements OnInit {
 
-  public dataSource: Client[] = [];
+  public dataSource: ItemGroup[] = [];
 
-  constructor(private service: ClientsService) { }
+  constructor(private service: ItemsGroupsService) { }
 
   ngOnInit(): void {
     this.handleData();
