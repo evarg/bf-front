@@ -1,74 +1,73 @@
-<div class="col-lg-6">
-
+<div class="col-lg-12">
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title">Custom Styled Validation</h5>
-      <p>For custom Bootstrap form validation messages, youâ€™ll need to add the <code>novalidate</code> boolean attribute to your <code>&lt;form&gt;</code>. This disables the browser default feedback tooltips, but still provides access to the form validation APIs in JavaScript. </p>
+      <h5 class="card-title">Nowy adres</h5>
 
-      <!-- Custom Styled Validation -->
-      <form class="row g-3 needs-validation"  [formGroup]="formInstance" novalidate>
-        <div class="col-md-4">
+      <form class="row g-3 needs-validation" [formGroup]="form">
+        <div class="col-md-6">
           <label for="validationCustom01" class="form-label">Kraj</label>
-          <input type="text" class="form-control" id="validationCustom01" formControlName="{{ FIELDS.COUNTRY }}">
-          <div class="valid-feedback">
-            Looks good!
-          </div>
-        </div>
-        <div class="col-md-4">
-          <label for="validationCustom02" class="form-label">Województwo</label>
-          <input type="text" class="form-control" id="validationCustom02" formControlName="{{ FIELDS.STATE }}">
-          <div class="valid-feedback">
-            Looks good!
-          </div>
-        </div>
-        <div class="col-md-4">
-          <label for="validationCustomUsername" class="form-label">Miasto</label>
-          <div class="input-group has-validation">
-            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" formControlName="{{ FIELDS.CITY }}">
-            <div class="invalid-feedback" *ngIf="formInstance.get(FIELDS.CITY)?.invalid">
-              Please choose a username.
-            </div>
+          <select class="form-control" name="country" id="country" formControlName="{{ inputNames.COUNTRY }}">
+            <option value="" disabled selected>Select Country</option>
+            <option *ngFor="let country of countries" [value]="country.name">{{country.name}}</option>
+          </select>
+          <div class="invalid-feedback" *ngIf="isInputValid(inputNames.COUNTRY)">
+            Należy prawidłowo wypełnić pole
           </div>
         </div>
         <div class="col-md-6">
-          <label for="validationCustom03" class="form-label">City</label>
-          <input type="text" class="form-control" id="validationCustom03" required>
-          <div class="invalid-feedback">
-            Please provide a valid city.
+          <label for="validationCustom02" class="form-label">Województwo</label>
+          <input type="text" class="form-control" id="validationCustom02" formControlName="{{ inputNames.STATE }}">
+          <div class="invalid-feedback" *ngIf="isInputValid(inputNames.STATE)">
+            Należy prawidłowo wypełnić pole
           </div>
         </div>
         <div class="col-md-3">
-          <label for="validationCustom04" class="form-label">State</label>
-          <select class="form-select" id="validationCustom04" required>
-            <option selected disabled value="">Choose...</option>
-            <option>...</option>
-          </select>
-          <div class="invalid-feedback">
-            Please select a valid state.
+          <label for="validationCustom03" class="form-label">Kod pocztowy</label>
+          <input type="text" class="form-control" id="validationCustom03" formControlName="{{ inputNames.CODE }}">
+          <div class="invalid-feedback" *ngIf="isInputValid(inputNames.CODE)">
+            Należy prawidłowo wypełnić pole
           </div>
         </div>
-        <div class="col-md-3">
-          <label for="validationCustom05" class="form-label">Zip</label>
-          <input type="text" class="form-control" id="validationCustom05" required>
-          <div class="invalid-feedback">
-            Please provide a valid zip.
-          </div>
-        </div>
-        <div class="col-12">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-            <label class="form-check-label" for="invalidCheck">
-              Agree to terms and conditions
-            </label>
-            <div class="invalid-feedback">
-              You must agree before submitting.
+        <div class="col-md-9">
+          <label for="validationCustomUsername" class="form-label">Miasto</label>
+          <div class="input-group has-validation">
+            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend"
+              formControlName="{{ inputNames.CITY }}">
+            <div class="invalid-feedback" *ngIf="isInputValid(inputNames.CITY)">
+              Należy prawidłowo wypełnić pole
             </div>
           </div>
         </div>
-        <div class="col-12">
-          <button class="btn btn-primary" type="submit" [disabled]="formInstance.invalid">Submit form</button>
+        <div class="col-md-8">
+          <label for="validationCustomUsername" class="form-label">Ulica</label>
+          <div class="input-group has-validation">
+            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend"
+              formControlName="{{ inputNames.STREET }}">
+            <div class="invalid-feedback" *ngIf="isInputValid(inputNames.STREET)">
+              Należy prawidłowo wypełnić pole
+            </div>
+          </div>
         </div>
-      </form><!-- End Custom Styled Validation -->
+        <div class="col-md-2">
+          <label for="validationCustom04" class="form-label">Numer domu</label>
+          <input type="text" class="form-control" id="validationCustom05"
+            formControlName="{{ inputNames.HOUSE_NUMBER }}">
+          <div class="invalid-feedback" *ngIf="isInputValid(inputNames.HOUSE_NUMBER)">
+            Należy prawidłowo wypełnić pole
+          </div>
+        </div>
+        <div class="col-md-2">
+          <label for="validationCustom05" class="form-label">Numer lokalu</label>
+          <input type="text" class="form-control" id="validationCustom05"
+            formControlName="{{ inputNames.HOME_NUMBER }}">
+          <div class="invalid-feedback" *ngIf="isInputValid(inputNames.HOME_NUMBER)">
+            Należy prawidłowo wypełnić pole
+          </div>
+        </div>
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit" [disabled]="form.invalid">Zapisz</button>
+        </div>
+      </form>
 
     </div>
   </div>

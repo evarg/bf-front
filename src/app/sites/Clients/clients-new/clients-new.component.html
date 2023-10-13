@@ -1,1 +1,63 @@
-<p>clients-new works!</p>
+<div class="col-lg-12">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Nowy klient</h5>
+
+      <form class="row g-3 needs-validation" [formGroup]="form">
+        <div class="col-md-6">
+          <label for="validationCustom02" class="form-label">Nazwa</label>
+          <input type="text" class="form-control" id="validationCustom02" formControlName="{{ inputNames.STATE }}">
+          <div class="invalid-feedback" *ngIf="isInputValid(inputNames.STATE)">
+            Należy prawidłowo wypełnić pole
+          </div>
+        </div>
+        <div class="col-md-3">
+          <label for="validationCustom03" class="form-label">Kod pocztowy</label>
+          <input type="text" class="form-control" id="validationCustom03" formControlName="{{ inputNames.CODE }}">
+          <div class="invalid-feedback" *ngIf="isInputValid(inputNames.CODE)">
+            Należy prawidłowo wypełnić pole
+          </div>
+        </div>
+        <div class="col-md-9">
+          <label for="validationCustomUsername" class="form-label">Miasto</label>
+          <div class="input-group has-validation">
+            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend"
+              formControlName="{{ inputNames.CITY }}">
+            <div class="invalid-feedback" *ngIf="isInputValid(inputNames.CITY)">
+              Należy prawidłowo wypełnić pole
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <label for="validationCustomUsername" class="form-label">Ulica</label>
+          <div class="input-group has-validation">
+            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend"
+              formControlName="{{ inputNames.STREET }}">
+            <div class="invalid-feedback" *ngIf="isInputValid(inputNames.STREET)">
+              Należy prawidłowo wypełnić pole
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <label for="validationCustom04" class="form-label">Numer domu</label>
+          <input type="text" class="form-control" id="validationCustom05"
+            formControlName="{{ inputNames.HOUSE_NUMBER }}">
+          <div class="invalid-feedback" *ngIf="isInputValid(inputNames.HOUSE_NUMBER)">
+            Należy prawidłowo wypełnić pole
+          </div>
+        </div>
+        <div class="col-md-2">
+          <label for="validationCustom05" class="form-label">Numer lokalu</label>
+          <input type="text" class="form-control" id="validationCustom05"
+            formControlName="{{ inputNames.HOME_NUMBER }}">
+          <div class="invalid-feedback" *ngIf="isInputValid(inputNames.HOME_NUMBER)">
+            Należy prawidłowo wypełnić pole
+          </div>
+        </div>
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit" [disabled]="form.invalid">Zapisz</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
